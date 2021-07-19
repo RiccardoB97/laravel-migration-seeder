@@ -25,7 +25,7 @@ class PackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('packages.create');
     }
 
     /**
@@ -36,7 +36,14 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $package = new Package();
+        $package->name = $request->name;
+        $package->description = $request->description;
+        $package->destination = $request->destination;
+        $package->image_url = $request->image_url;
+        $package->price = $request->price;
+        $package->save();
+        return redirect()->route('package.index');
     }
 
     /**
@@ -47,7 +54,7 @@ class PackageController extends Controller
      */
     public function show(Package $package)
     {
-        //
+        return view('packages.show', compact('package'));
     }
 
     /**
@@ -58,7 +65,8 @@ class PackageController extends Controller
      */
     public function edit(Package $package)
     {
-        //
+        return view('packages.edit', compact('package'));
+        
     }
 
     /**
@@ -70,7 +78,8 @@ class PackageController extends Controller
      */
     public function update(Request $request, Package $package)
     {
-        //
+        $package->update($request->all()); 
+        return redirect()->route('packages.index');
     }
 
     /**
@@ -81,6 +90,7 @@ class PackageController extends Controller
      */
     public function destroy(Package $package)
     {
-        //
+        $package->delete();
+        return redirect()->route('packages.index');
     }
 }
