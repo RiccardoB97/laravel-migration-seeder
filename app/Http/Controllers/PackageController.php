@@ -43,7 +43,7 @@ class PackageController extends Controller
         $package->image_url = $request->image_url;
         $package->price = $request->price;
         $package->save();
-        return redirect()->route('package.index');
+        return redirect()->route('packages.index');
     }
 
     /**
