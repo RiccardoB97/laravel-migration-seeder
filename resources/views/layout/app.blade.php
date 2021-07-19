@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Home Page')</title>
+    {{-- Link to CSS --}}
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    {{-- Bootstrap cdn --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <header id="site_header">
