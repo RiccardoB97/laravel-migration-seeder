@@ -13,6 +13,12 @@
             <dd>{{$package->description}}</dd>
             <dt>Price:</dt>
             <dd>{{$package->price}}</dd>
+            <dt>Actions</dt>
+            <dd>
+                <a href="">View</a> |
+                <a href="">Edit</a> |
+                <a href="">Delete</a>
+            </dd>
             <img src="{{$package->image_url}}" alt="{{$package->name}}">
         </dl>
     </div>
