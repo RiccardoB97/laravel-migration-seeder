@@ -7,6 +7,8 @@
         <dl>
             <dt>Package name:</dt>
             <dd>{{$package->name}}</dd>
+            <dt>Destination:</dt>
+            <dd>{{$package->destination}}</dd>
             <dt>Description:</dt>
             <dd>{{$package->description}}</dd>
             <dt>Price:</dt>
