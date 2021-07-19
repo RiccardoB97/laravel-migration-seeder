@@ -22,7 +22,11 @@
             <dd>
                 <a href="{{route('packages.show', $package->id)}}">View</a> |
                 <a href="{{route('packages.edit',$package->id)}}">Edit</a> |
-                <a href="{{route('packages.destroy',$package->id)}}">Delete</a>
+                <form action="{{route('packages.destroy', $package->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
             </dd>
             <img src="{{$package->image_url}}" alt="{{$package->name}}">
         </dl>
