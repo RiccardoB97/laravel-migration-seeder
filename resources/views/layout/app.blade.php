@@ -12,7 +12,12 @@
 </head>
 <body>
     <header id="site_header">
-
+        <div class="container">
+            <nav>
+                <h1>Travel Packages</h1>
+                <a href="{{route('packages.create')}}" class='btn btn-primary'>Add a package</a>
+            </nav>
+        </div>
     </header>
     <main id="site_main">
         @yield('main_content')
