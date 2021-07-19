@@ -1,7 +1,12 @@
 @extends('layout.app')
 @section('title', 'Home - Travel Packages')
 @section('main_content')
-<div class="container">
+<nav>
+    <div class="container">
+        <a href="{{route('packages.create')}}" class='btn btn-primary'>Add a package</a>
+    </div>
+</nav>
+<div class="container cards">
     @foreach($packages as $package)
     <div class="card">
         <dl>

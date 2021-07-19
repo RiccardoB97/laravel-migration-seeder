@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Home - Travel Packages')
+@section('title', 'Travel Packages')
 @section('main_content')
 <div class="container">
     <div class="card">
